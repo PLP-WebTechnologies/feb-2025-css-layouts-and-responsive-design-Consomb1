@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livestock Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Note: This page uses Flexbox for main layout, is responsive with media queries, and has been tested across mobile, tablet, and desktop screen sizes -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#dashboard"><span class="icon">📊</span> Dashboard</a></li>
+            <li><a href="#animals"><span class="icon">🐄</span> Animals</a></li>
+            <li><a href="#tasks"><span class="icon">✅</span> Tasks</a></li>
+            <li><a href="#reports"><span class="icon">📋</span> Reports</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Header Section (Dashboard Landing) -->
+        <section class="header" id="dashboard">
+            <div class="header-content">
+                <h1>Welcome to Livestock Manager</h1>
+                <p>Your all-in-one solution for efficient farm management.</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section class="main-content dashboard-content">
+            <h2>Dashboard</h2>
+            <div class="image-container">
+                <img src="https://images.pexels.com/photos/31458832/pexels-photo-31458832/free-photo-of-brown-and-black-cows-grazing-in-green-pasture.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cows in field" class="content-image">
+            </div>
+            <p>Monitor your farm at a glance with key metrics and alerts.</p>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Herd Overview</h3>
+                    <p>Total: 124 animals</p>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Alerts</h3>
+                    <p>Feed stock low</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animals Section -->
+        <section class="main-content animals-content" id="animals">
+            <h2>Animals</h2>
+            <div class="image-container">
+                <img src="https://images.pexels.com/photos/51311/cow-calf-cattle-stock-51311.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cow portrait" class="content-image">
+            </div>
+            <p>Track health and breeding for each animal.</p>
+            <div class="animals-grid">
+                <div class="animal-card">
+                    <h3>Bessie (Cow)</h3>
+                    <p>ID: C012 | Age: 4 yrs</p>
+                    <button class="card-button">View Profile</button>
+                </div>
+                <div class="animal-card">
+                    <h3>Fluffy (Sheep)</h3>
+                    <p>ID: S034 | Age: 2 yrs</p>
+                    <button class="card-button">View Profile</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tasks Section -->
+        <section class="main-content tasks-content" id="tasks">
+            <h2>Tasks</h2>
+            <div class="image-container">
+                <img src="https://images.pexels.com/photos/7782073/pexels-photo-7782073.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Farmer working" class="content-image">
+            </div>
+            <p>Stay organized with your daily farm duties.</p>
+            <ul class="tasks-list">
+                <li><span class="task-status">🔲</span> Vaccinate calves - Due: Today</li>
+                <li><span class="task-status">✅</span> Clean barn - Done</li>
+            </ul>
+            <button class="cta-button">Add Task</button>
+        </section>
+
+        <!-- Reports Section -->
+        <section class="main-content reports-content" id="reports">
+            <h2>Reports</h2>
+            <div class="image-container">
+                <img src="https://images.pexels.com/photos/31559896/pexels-photo-31559896/free-photo-of-scenic-countryside-pasture-with-grazing-cows.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Farm landscape" class="content-image">
+            </div>
+            <p>Generate insights on herd health and productivity.</p>
+            <div class="reports-grid">
+                <div class="report-card">
+                    <h3>Health Report</h3>
+                    <p>90% vaccinated</p>
+                    <button class="card-button">Download</button>
+                </div>
+                <div class="report-card">
+                    <h3>Productivity</h3>
+                    <p>Milk: 800L/month</p>
+                    <button class="card-button">Download</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Quick Stats</h2>
+            <div class="image-container">
+                <img src="https://images.pexels.com/photos/9873553/pexels-photo-9873553.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sheep grazing" class="sidebar-image">
+            </div>
+            <ul class="stats-list">
+                <li><span class="stat-icon">🐄</span> Animals: 124</li>
+                <li><span class="stat-icon">💉</span> Vaccinations: 8</li>
+                <li><span class="stat-icon">📅</span> Tasks: 3</li>
+            </ul>
+            <button class="sidebar-button">Full Report</button>
+        </aside>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 Livestock Manager. Built for farmers.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e8f0e6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: linear-gradient(90deg, #2e7d32, #1b5e20);
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-list li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+/* Main Layout with Flexbox */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh; /* Ensure container fills viewport height */
+}
+
+.header {
+    background: url('https://images.pexels.com/photos/162240/bull-landscape-agriculture-meadow-162240.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center/cover;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 2rem; /* Reduced padding */
+    height: 200px; /* Fixed height for better viewport fit */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay for text readability */
+    border-radius: 10px;
+}
+
+.header-content {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #388e3c;
+}
+
+.main-content, .sidebar, .footer {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Image Styling */
+.image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.content-image {
+    width: 100%;
+    max-height: 150px; /* Reduced height for better fit */
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.sidebar-image {
+    width: 100%;
+    max-height: 100px; /* Reduced height for sidebar */
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Internal Grids for Sections */
+.dashboard-grid, .animals-grid, .reports-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.dashboard-card, .animal-card, .report-card {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.dashboard-card h3, .animal-card h3, .report-card h3 {
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+}
+
+/* Animals Section */
+.animal-card p {
+    margin-bottom: 0.8rem;
+}
+
+.card-button {
+    background-color: #0288d1;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-button:hover {
+    background-color: #0277bd;
+}
+
+/* Tasks Section */
+.tasks-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.tasks-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.task-status {
+    font-size: 1.2rem;
+}
+
+/* Sidebar Stats */
+.stats-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.stats-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+}
+
+.sidebar-button {
+    background-color: #0288d1;
+    color: #fff;
+    border: none;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.sidebar-button:hover {
+    background-color: #0277bd;
+}
+
+.footer {
+    text-align: center;
+    color: #555;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .header, .footer {
+        flex: 1 0 100%;
+    }
+
+    .main-content {
+        flex: 2 1 60%;
+    }
+
+    .sidebar {
+        flex: 1 1 30%;
+        position: sticky;
+        top: 5rem; /* Adjusted for smaller navbar */
+        align-self: start;
+    }
+
+    .dashboard-grid, .animals-grid, .reports-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-image {
+        max-height: 200px;
+    }
+
+    .sidebar-image {
+        max-height: 120px;
+    }
+
+    .header {
+        height: 250px;
+        padding: 2.5rem;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-content {
+        flex: 2 1 70%;
+    }
+
+    .sidebar {
+        flex: 1 1 25%;
+    }
+
+    .content-image {
+        max-height: 250px;
+    }
+
+    .sidebar-image {
+        max-height: 150px;
+    }
+
+    .header {
+        height: 300px;
+        padding: 3rem;
+    }
+
+    .header h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-list li a {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .container {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .header {
+        height: 150px;
+        padding: 1.5rem;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .content-image {
+        max-height: 120px;
+    }
+
+    .sidebar-image {
+        max-height: 80px;
+    }
+
+    .cta-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
